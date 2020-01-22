@@ -1,0 +1,11 @@
+<div>
+    <h1>Create a New Post</h1>
+    <p>{{post && post._id}}</p>
+    <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()" >
+        <div *ngFor="let field of fields">
+            <label for="{{field}}">{{field}}</label>
+            <input id="{{field}}" type="text" value="{{post && post[field]}}" placeholder="{{field}}" name="{{field}}" formControlName="{{field}}" />    
+        </div>
+        <button type="submit">submit</button>
+    </form>
+</div>

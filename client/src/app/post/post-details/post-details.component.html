@@ -1,0 +1,15 @@
+<div>
+    <h1>Post Details</h1>
+    <a [routerLink]="['/post/edit/', post._id]">edit this post</a>
+    <table>
+        <thead><tr><td>name</td><td>data</td></tr></thead>
+        <tbody>
+            <tr><td>title</td><td>{{post.title}}</td></tr>
+            <tr><td>category</td><td>{{post.category}}</td></tr>
+            <tr><td>id</td><td>{{post._id}}</td></tr>
+            <tr><td>author</td><td>{{post.author}}</td></tr>
+            <tr><td>created</td><td>{{post.created}}</td></tr>
+            <tr><td>updated</td><td>{{post.updated}}</td></tr>
+        </tbody>
+    </table>
+</div>

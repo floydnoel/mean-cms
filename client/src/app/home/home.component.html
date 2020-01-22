@@ -1,0 +1,9 @@
+<div>
+    <h1>Home</h1>
+    <div *ngIf="isLoading">
+        Loading...
+    </div>
+    <div *ngFor="let post of posts">
+        <a [routerLink]="['/post/details/', post._id]">{{post.title}} - {{post.description}} by {{post.author}}</a>
+    </div>
+</div>

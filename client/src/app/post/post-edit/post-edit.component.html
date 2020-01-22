@@ -1,0 +1,16 @@
+<h1>Post Edit</h1>
+<div *ngIf="isLoading">
+    Loading...
+</div>
+
+<div>
+    <p>Post ID: {{post && post._id}}</p>
+    <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()" >
+        <div *ngFor="let field of fields">
+            <label for="{{field}}">{{field}}</label>
+            <input id="{{field}}" type="text" value="{{post && post[field]}}" placeholder="{{field}}" name="{{field}}" formControlName="{{field}}" />    
+        </div>
+        <button type="submit">submit</button>
+    </form>
+    <button (click)="onDeleteClick()">delete this post</button>
+</div>
